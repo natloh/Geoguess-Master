@@ -7,10 +7,7 @@ module.exports = {
     "<rootDir>/node_modules/(?!(vue-material-design-icons)/)",
   ],
   collectCoverage: true,
-  collectCoverageFrom: [
-    'src/**/*.{ts,vue}',
-    '!src/main.ts', 
-  ],
+  collectCoverageFrom: ["src/**/*.{ts,vue}", "!src/main.ts"],
 };
 
 process.env = Object.assign(process.env, {

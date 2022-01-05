@@ -15,7 +15,9 @@ describe("Test RoomNumberDialog", () => {
   });
 
   it("Test component style when the game is not ready", () => {
-    expect(wrapper.find(".room-number-dialog").classes()).not.toContain("moved");
+    expect(wrapper.find(".room-number-dialog").classes()).not.toContain(
+      "moved"
+    );
   });
 
   it("Dialog is gone when the game is ready", async () => {
