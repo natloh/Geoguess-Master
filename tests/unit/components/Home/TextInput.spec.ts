@@ -30,9 +30,7 @@ describe("Test TextInput component", () => {
   });
 
   it("Test input placeholder", () => {
-    expect(wrapper.find("input[placeholder='This is test']").exists()).toBe(
-      true
-    );
+    expect(wrapper.find("input[placeholder='This is test']").exists()).toBe(true);
   });
 
   it("Test input value", () => {

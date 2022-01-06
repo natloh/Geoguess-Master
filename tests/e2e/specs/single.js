@@ -18,8 +18,8 @@ describe("Test single player game", () => {
   });
 
   it("Guess button can be clicked after selecting a location", () => {
-    cy.get("#map-container").trigger("mouseover").wait(1000);
-    cy.get("#map-container").click();
+    cy.get('#map-container').trigger("mouseover").wait(1000);
+    cy.get('#map-container').click();
     cy.get("#guess-button").should("not.be.disabled");
   });
 
@@ -29,8 +29,7 @@ describe("Test single player game", () => {
   });
 
   it("Test result text", () => {
-    cy.window()
-      .its("__store__")
+    cy.window().its('__store__')
       .then((store) => {
         const distance = store.getters.distance;
         cy.get("#distance").should("have.text", `You are ${distance}km away.`);
@@ -46,8 +45,8 @@ describe("Test single player game", () => {
     // Skip some rounds and proceed to round 5
     const roundArr = [2, 3, 4];
     cy.wrap(roundArr).each(() => {
-      cy.get("#map-container").trigger("mouseover").wait(1000);
-      cy.get("#map-container").click();
+      cy.get('#map-container').trigger("mouseover").wait(1000);
+      cy.get('#map-container').click();
       cy.get("#guess-button").click();
       cy.get("#next-round-button").click();
     });
@@ -56,8 +55,8 @@ describe("Test single player game", () => {
   });
 
   it("View summary button should appear on modal at round 5", () => {
-    cy.get("#map-container").trigger("mouseover").wait(1000);
-    cy.get("#map-container").click();
+    cy.get('#map-container').trigger("mouseover").wait(1000);
+    cy.get('#map-container').click();
     cy.get("#guess-button").click();
 
     cy.get("#view-summary-button").should("exist");
@@ -66,14 +65,10 @@ describe("Test single player game", () => {
   it("Test summary text", () => {
     cy.get("#view-summary-button").click();
 
-    cy.window()
-      .its("__store__")
+    cy.window().its('__store__')
       .then((store) => {
         const score = store.state.inGame.score;
-        cy.get("#distance").should(
-          "have.text",
-          `You are ${score}km away in total.`
-        );
+        cy.get("#distance").should("have.text", `You are ${score}km away in total.`);
       });
   });
 

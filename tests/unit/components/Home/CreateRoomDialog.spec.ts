@@ -40,47 +40,35 @@ describe("Test CreateRoomDialog component", () => {
   it("Test the size text style when isOwner is false", async () => {
     await wrapper.setProps({ isOwner: false });
 
-    expect(wrapper.find("#size-form-title").classes()).toContain(
-      "disabled-form-title"
-    );
+    expect(wrapper.find("#size-form-title").classes()).toContain("disabled-form-title");
   });
 
   it("Test the size helper text style when isOwner is false", async () => {
     await wrapper.setProps({ isOwner: false });
 
-    expect(wrapper.find("#size-form-helper-text").classes()).toContain(
-      "disabled-form-helper-text"
-    );
+    expect(wrapper.find("#size-form-helper-text").classes()).toContain("disabled-form-helper-text");
   });
 
   it("Test the time text style when isOwner is false", async () => {
     await wrapper.setProps({ isOwner: false });
-
-    expect(wrapper.find("#time-form-title").classes()).toContain(
-      "disabled-form-title"
-    );
+    
+    expect(wrapper.find("#time-form-title").classes()).toContain("disabled-form-title");
   });
 
   it("Test the time helper text style when isOwner is false", async () => {
     await wrapper.setProps({ isOwner: false });
 
-    expect(wrapper.find("#time-form-helper-text").classes()).toContain(
-      "disabled-form-helper-text"
-    );
+    expect(wrapper.find("#time-form-helper-text").classes()).toContain("disabled-form-helper-text");
   });
 
   it("Test the button style when isReadyForMultiplayerGame is false", () => {
-    expect(wrapper.find(".start-game-button").classes()).toContain(
-      "cursor-not-allowed"
-    );
+    expect(wrapper.find(".start-game-button").classes()).toContain("cursor-not-allowed");
   });
 
   it("Test error message when isRoomFound is false", async () => {
     await wrapper.setProps({ isRoomFound: false });
 
-    expect(wrapper.vm.roomCannnotBeFoundError).toBe(
-      "The room cannot be found."
-    );
+    expect(wrapper.vm.roomCannnotBeFoundError).toBe("The room cannot be found.");
   });
 
   it("Test onChangeSize event", () => {
@@ -125,12 +113,8 @@ describe("Test CreateRoomDialog component", () => {
   it("Start button is disabled when isReadyForMultiplayerGame is false", async () => {
     await wrapper.find(".start-game-button").trigger("click");
 
-    expect(
-      wrapper.find(".start-game-button").attributes("disabled")
-    ).toBeDefined();
-    expect(
-      wrapper.emitted().onClickStartMultiplayerGameButton
-    ).not.toBeDefined();
+    expect(wrapper.find(".start-game-button").attributes("disabled")).toBeDefined();
+    expect(wrapper.emitted().onClickStartMultiplayerGameButton).not.toBeDefined();
   });
 
   it("Test onClickStartMultiplayerGameButton event", async () => {
