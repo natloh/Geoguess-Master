@@ -4,13 +4,7 @@
       <img src="@/assets/logo.png" class="logo" />
       <span class="title">Geoguess Master</span>
       <div class="header-right">
-        <a href="https://github.com/spider-hand/Geoguess-Master">
-          <GithubIcon
-            title="Github repository link here."
-            fillColor="#ffffff"
-            :size="32"
-          />
-        </a>
+        
       </div>
     </div>
     <div class="container">
@@ -91,8 +85,7 @@
     <div class="footer">
       <div class="copyright-container">
         <span class="copyright-text">
-          All rights reserved. Copyright © {{ new Date().getFullYear() }}
-          <strong>Spider Hand</strong>
+          
         </span>
       </div>
     </div>
