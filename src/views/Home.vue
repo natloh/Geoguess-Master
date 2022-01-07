@@ -97,7 +97,6 @@ import { defineComponent, onMounted, reactive, ref } from "vue";
 
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
-import GithubIcon from "vue-material-design-icons/Github.vue";
 import {
   get,
   push,
