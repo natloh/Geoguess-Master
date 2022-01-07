@@ -117,7 +117,6 @@ import { database } from "@/firebase";
 
 export default defineComponent({
   components: {
-    GithubIcon,
     SelectBox,
     CreateRoomDialog,
   },
