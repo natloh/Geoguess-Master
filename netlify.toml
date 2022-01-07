@@ -1,2 +1,6 @@
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
+
+[functions]
+  # Sets a custom directory for Netlify Functions
+  directory = "functions/src"
